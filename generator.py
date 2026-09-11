@@ -18,6 +18,18 @@ def generate_waveform(time_arr, frequency, shape = 'sine'):
         return np.random.uniform(-1.,1, size = len(time_arr))
 
 def play_audio(audio_data, sample_rate=44100):
+    sd.play(audio_data)
+    sd.wait()
+
+if __name__ == '__main__':
+    sr = 44100
+    t = gen_time_array(1, sr)
+    wave = generate_waveform(t, frequency=440,shape='square')
+
+    play_audio(wave, sample_rate= sr)
+
+
+
     
 
 
