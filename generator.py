@@ -24,7 +24,7 @@ def play_audio(audio_data, sample_rate=44100):
 if __name__ == '__main__':
     sr = 44100
     t = gen_time_array(1, sr)
-    wave = generate_waveform(t, frequency=440,shape='square')
+    wave = generate_waveform(t, frequency=440,shape='white')
 
     play_audio(wave, sample_rate= sr)
 
